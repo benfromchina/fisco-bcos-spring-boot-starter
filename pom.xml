@@ -11,7 +11,7 @@
     </parent>
     <groupId>io.github.benfromchina</groupId>
     <artifactId>fisco-bcos-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>fisco-bcos-spring-boot-starter</name>
     <description>Supports Fisco Bcos auto-configuration.</description>
