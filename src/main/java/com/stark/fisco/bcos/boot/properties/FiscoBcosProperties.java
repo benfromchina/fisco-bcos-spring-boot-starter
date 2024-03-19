@@ -45,19 +45,19 @@ public class FiscoBcosProperties {
         private boolean disableSsl = false;
 
         /** <i>CA</i> 证书路径，非国密时默认 <i>${certPath}/ca.crt</i>，国密时默认 <i>${certPath}/sm_ca.crt</i> */
-        private String caCert = "conf/ca.crt";
+        private String caCert;
 
         /** <i>SDK</i> 证书路径，非国密时默认 <i>${certPath}/sdk.crt</i>，国密时默认 <i>${certPath}/sm_sdk.crt</i> */
-        private String sslCert = "conf/sdk.crt";
+        private String sslCert;
 
         /** <i>SDK</i> 私钥路径，非国密时默认 <i>${certPath}/sdk.key</i>，国密时默认 <i>${certPaht}/sm_sdk.key</i> */
-        private String sslKey = "conf/sdk.key";
+        private String sslKey;
 
         /** 国密 <i>SSL</i> 加密证书路径，默认 <i>${certPath}/sm_ensdk.crt</i> */
-        private String enSslCert = "conf/sm_ensdk.crt";
+        private String enSslCert;
 
         /** 国密 <i>SSL</i> 加密私钥路径，默认 <i>${certPath}/sm_ensdk.key</i> */
-        private String enSslKey = "conf/sm_ensdk.key";
+        private String enSslKey;
 
         @Override
         public String toString() {
@@ -114,13 +114,13 @@ public class FiscoBcosProperties {
         /**
          * 加载的账户文件路径，非国密时默认 <i>${keyStoreDir}/ecdsa/${accountAddress}.${accountFileFormat}</i>，国密时默认 <i>${keyStoreDir}/gm/${accountAddress}.${accountFileFormat}</i>
          */
-        private String accountFilePath = "";
+        private String accountFilePath;
 
         /** 加载的账户地址，默认为空 */
-        private String accountAddress = "";
+        private String accountAddress;
 
         /** 加载 <i>p12</i> 类型账户文件的口令 */
-        private String password = "";
+        private String password;
 
         @Override
         public String toString() {
@@ -139,12 +139,12 @@ public class FiscoBcosProperties {
     public static class ThreadPool {
 
         /** 接收交易的线程数目，默认值为机器的 <i>CPU</i> 数目 */
-        private Integer threadPoolSize = Runtime.getRuntime().availableProcessors();
+        private Integer threadPoolSize;
 
         @Override
         public String toString() {
             return "[threadPool]" +
-                    "\nthreadPoolSize = \"" + threadPoolSize + "\"";
+                    "\nthreadPoolSize = \"" + (threadPoolSize != null ? threadPoolSize : Runtime.getRuntime().availableProcessors()) + "\"";
         }
 
     }
