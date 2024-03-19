@@ -114,13 +114,13 @@ public class FiscoBcosProperties {
         /**
          * 加载的账户文件路径，非国密时默认 <i>${keyStoreDir}/ecdsa/${accountAddress}.${accountFileFormat}</i>，国密时默认 <i>${keyStoreDir}/gm/${accountAddress}.${accountFileFormat}</i>
          */
-        private String accountFilePath;
+        private String accountFilePath = "";
 
         /** 加载的账户地址，默认为空 */
-        private String accountAddress;
+        private String accountAddress = "";
 
         /** 加载 <i>p12</i> 类型账户文件的口令 */
-        private String password;
+        private String password = "";
 
         @Override
         public String toString() {
@@ -139,12 +139,12 @@ public class FiscoBcosProperties {
     public static class ThreadPool {
 
         /** 接收交易的线程数目，默认值为机器的 <i>CPU</i> 数目 */
-        private Integer threadPoolSize;
+        private Integer threadPoolSize = Runtime.getRuntime().availableProcessors();
 
         @Override
         public String toString() {
             return "[threadPool]" +
-                    "\nthreadPoolSize = \"" + (threadPoolSize != null ? threadPoolSize : Runtime.getRuntime().availableProcessors()) + "\"";
+                    "\nthreadPoolSize = \"" + threadPoolSize + "\"";
         }
 
     }
