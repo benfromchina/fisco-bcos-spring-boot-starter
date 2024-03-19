@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/license-Apache--2.0-4D7A97)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![](https://img.shields.io/badge/maven%20central-v1.0.0-brightgreen)](https://central.sonatype.com/artifact/io.github.benfromchina/fisco-bcos-spring-boot-starter)
-[![](https://img.shields.io/badge/release-v1.0.0-blue)](https://github.com/benfromchina/fisco-bcos-spring-boot-starter/releases/tag/v1.0.0)
+[![](https://img.shields.io/badge/maven%20central-v1.0.1-brightgreen)](https://central.sonatype.com/artifact/io.github.benfromchina/fisco-bcos-spring-boot-starter)
+[![](https://img.shields.io/badge/release-v1.0.1-blue)](https://github.com/benfromchina/fisco-bcos-spring-boot-starter/releases/tag/v1.0.1)
 
 ### 使用方法
 
@@ -12,7 +12,7 @@
 <dependency>
     <groupId>io.github.benfromchina</groupId>
     <artifactId>fisco-bcos-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
